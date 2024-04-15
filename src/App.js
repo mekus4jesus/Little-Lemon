@@ -6,9 +6,11 @@ import { Nav } from './component/Nav';
 function App() {
   return (
     <>
-   <Nav/>
-   <Main/>
-   <Footer/>
+    <div className="bodyContainer">
+        <Nav/>
+        <Main/>
+        <Footer/>
+    </div>
     </>
   );
 }
