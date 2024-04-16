@@ -1,39 +1,170 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&display=swap');
+
+:root{
+  --primaryColor: #495E57;
+  --secondaryColor: #FACE14;
+  --tetiaryColor:#EFEFEE;
+  --primaryFont: Karla, sans-serif;
+  --secondaryFont: Markazi Text,serif;
+}
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+}
+h1{
+  font-size: 4rem;
 }
 
-body{
+nav{
   width: 100%;
 }
-.bodyContainer{
-  padding: 1rem 12rem;
-}
-
-nav .navbar{
-  width:100;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
+   nav .navbar{
+     margin-top: 1.8rem;
+    }
+    nav .navbarFlex{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
 nav .pageLink ul{
+  margin-top: 0.5rem;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
   }
-nav .pageLink li{
-  margin: 0 1rem;
+  
+ a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.2rem;
+    font-optical-sizing: auto;
+    font-weight:bold;
+    font-style: normal;
+  }
+.Hero {
+  position: relative;
+  margin-top: 2rem;
+  background-color: var(--primaryColor);
+  padding: 3rem 0;
 }
-nav .pageLink a{
-  text-decoration: none;
-  color: #000000;
-  font-size: 1.5rem;
-  font-family: "Karla", sans-serif;
+.heroLeft h1{
+  display: inline-block;
+  font-family: var(--secondaryFont);
+  color: var(--secondaryColor);
   font-optical-sizing: auto;
-  font-weight:bold;
+  font-weight: bold;
   font-style: normal;
 }
+
+.heroLeft p{
+  font-family: var(--secondaryFont);
+  color: var(--tetiaryColor);
+  font-size:2.5rem;
+  font-optical-sizing: auto;
+  font-style: normal;
+  margin-top: -2rem;
+}
+.heroLeft article p{
+  font-family: var(--primaryFont);
+  font-size: 1.125rem;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: #FFFFFF;
+  margin-top: 1.5rem;
+}
+
+ button.btn{
+  margin-top: 1rem;
+  padding: 0.8em 3em;
+  border: none;
+  border-radius: 16px;
+  background-color: var(--secondaryColor);
+  font-family: var(--primaryFont);
+  font-size: 1.125rem;
+  color:#333333;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2)
+}
+
+@media (max-width: 700px) {
+  .grid-adjustable-columns {
+    display: grid;
+    grid-auto-flow: row;
+    padding: 1rem 0.7rem;
+  }
+  h1{
+    font-size: 3rem;
+  }
+  nav .navbar{
+    display: block;
+  margin-top: 1.8rem;
+  }
+  nav .pageLink ul{
+    display: block;
+  }
+  nav .pageLink li{
+    margin: 0 1rem;
+  }
+  nav .pageLink Link{
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.3rem;
+    font-family:var(--primaryFont);
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+  .heroFlex{
+    display: block;
+  }
+  .heroLeft{
+    width: 100%;
+    text-align: center;
+    margin-top: -2rem;
+  }
+  .heroLeft p{
+    font-size: 2rem;
+    margin-top: -1.8rem;
+  }
+  .heroLeft article p, button.btn{
+    font-size: 1rem;
+  }
+
+  .heroRight img{
+    display: none;
+  }
+
+}
+
+@media (min-width: 701px) {
+  .grid-adjustable-columns {
+    width: min(1000px,75rem);
+    margin: 0 auto;
+    grid-auto-flow: column;
+    gap: 1em;
+  }
+    nav .pageLink li{
+      margin: 0 1rem;
+    }
+   
+    .heroFlex{
+      display: flex;
+    }
+    .heroLeft{
+      width: 50%;
+    }
+    .heroRight img{
+      position: absolute;
+      border-radius: 16px;
+      top: 25%;
+      left: 60%;
+      width: 22.75rem;
+      height: 24.375rem;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2)
+    }
+  }
