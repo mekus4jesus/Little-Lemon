@@ -20,7 +20,6 @@ export const Nav = () => {
             </li>
             <li><a href="#">About</a></li>
             <li><a href="#">Menu</a></li>
-            <li><a href="#">Reservation</a></li>
             <li>
               <Link to={'/booking'}> Reservation</Link>
             </li>

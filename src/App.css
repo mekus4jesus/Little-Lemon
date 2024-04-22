@@ -7,6 +7,8 @@
   --primaryColor: #495E57;
   --secondaryColor: #FACE14;
   --tetiaryColor:#EFEFEE;
+  --quadraColor:#333333;
+  --footer: #987F7F;
   --primaryFont: Karla, sans-serif;
   --secondaryFont: Markazi Text,serif;
 }
@@ -19,6 +21,15 @@
 }
 h1{
   font-size: 4rem;
+}
+h2{
+  font-size:2rem;
+}
+h3{
+  font-size: 1.25rem;
+}
+ul{
+  list-style-type:none;
 }
 
 nav{
@@ -34,15 +45,13 @@ nav{
     }
 nav .pageLink ul{
   margin-top: 0.5rem;
-  list-style-type: none;
   display: flex;
   flex-wrap: wrap;
   }
-  
  a{
     text-decoration: none;
     color: #000000;
-    font-size: 1.2rem;
+    font-size: 1.125rem;
     font-optical-sizing: auto;
     font-weight:bold;
     font-style: normal;
@@ -91,8 +100,233 @@ nav .pageLink ul{
   cursor: pointer;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2)
 }
+section.menu{
+  margin-top: 11rem;
+}
+section.menu .menuflex{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+section.menu .special{
+  font-family: var(--primaryFont);
+  font-optical-sizing: auto;
+  font-weight: bolder;
+  font-style: normal;
+}
+section.menu .btnMenu{
+  position: absolute;
+  bottom:1% ;
+  left: 75%;
+  font-family: var(--secondaryFont);
+  background-color: var(--secondaryColor);
+  font-size:1.125rem;
+  border: none;
+  border-radius: 16px;
+  color:#333333;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2)
+}
+.cardComponent{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 2.5rem;
+  margin-top: 5rem;
+}
+.cardComp{
+  border-radius: 16px;
+ background-color: var(--tetiaryColor);
+ box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+ cursor: pointer;
+ transition: transform 1s ease;
+}
+.cardComp:hover{
+  transform: scale(1.1);
+}
+.MenuTitle{
+ padding: 0.8rem 1rem;
+ margin-top: -0.2rem;
+}
+.foodPrice{
+  display: flex;
+  justify-content: space-between;
+}
+.orderOnline{
+  display: flex;
+}
+.cardImg img{
+  width: 100%;
+  object-fit: fill;
+}
+.foodTitle,.order{
+  font-family: var(--secondaryFont);
+}
 
-@media (max-width: 700px) {
+.price p,.description p{
+  font-family: var(--secondaryFont);
+  font-size: 1.125rem;
+}
+.bicycleIcon img{
+  width: 1rem;
+  margin: 0.3rem 2rem;
+}
+.Testimonial{
+  margin-top: 6rem;
+  background-color: var(--quadraColor);
+  padding: 6rem 0;
+
+}
+
+.TestimonialHead{
+  text-align: center;
+  font-family: var(--primaryFont);
+  color:var(--secondaryColor);
+}
+.userData{
+  display:grid;
+  grid-template-columns: repeat(4,1fr);
+  margin-top: 4rem;
+  gap: 3rem;
+}
+.userdataName{
+  background-color:#D9D9D9;
+  padding: 1rem 0.5rem;
+  border-radius: 8px;
+  font-family: var(--secondaryFont);
+  font-size: 1.125rem;
+}
+.userRate{
+  display: flex;
+  align-items: center;
+}
+.rate{
+  color: red;
+  margin-left: 1rem;
+}
+.About{
+  margin-top: 7rem;
+}
+.aboutSection{
+  position: relative;
+}
+.aboutTitle p{
+  color: #000000;
+}
+.aboutCompany{
+  display: flex;
+  justify-content: space-between;
+
+}
+.companyDes{
+  width: 40%;
+  font-size: 1.125rem;
+  font-family: var(--primaryFont);
+}
+.compImg{
+  width: 60%;
+}
+.img1 img,.img2 img{
+  position: absolute;
+  height: 280px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  object-fit: fill;
+}
+.img1 img{
+  top: 90%;
+  left: 35%;
+  z-index: 9999;
+}
+.img2 img{
+  top: -2%;
+ right: 0;
+}
+footer{
+  margin-top: 23rem;
+  background-color: #f1eeee;
+  border-top: #000000;
+
+}
+.footerSection{
+  display:flex;
+  justify-content: space-between;
+  padding: 3rem 0;
+}
+.footerImg img{
+  width:100%;
+}
+.reservationNav li{
+  font-family: var(--secondaryFont);
+}
+.reservationNav a,.foodTitle li{
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+.foot {
+  margin: 0 3.2rem;
+}
+h3.footerTitle{
+  margin-bottom: 1.5rem;
+  font-family: var(--primaryFont);
+}
+.contact p{
+  font-family: var(--primaryFont);
+}
+.footerIcon ul{
+  display: flex;
+  font-size: 1.2rem;
+}
+.footerIcon li{
+  margin: 0  0.6rem;
+}
+
+@media (max-width: 720px) and (min-width: 320px) {
+  .grid-adjustable-columns {
+    display: grid;
+    grid-auto-flow: row;
+    /* padding: 1rem 0.7rem; */
+  }
+  
+  .aboutSection{
+    display: block;
+    padding-bottom: -30rem;
+    /* height: 100px; */
+  }
+  .aboutTitle h1{
+    font-size: 4rem;
+  }
+  .aboutTitle p{
+    font-size: 2.5rem;
+  }
+  .companyDes p{
+    font-size: 2rem;
+    text-align: justify;
+  }
+  .img1 img,.img2 img{
+    display: none;
+  }
+  .footerIcon {
+    text-align: center;
+  }
+  .footerSection{
+    width: 100%;
+    padding: 3rem 2.8rem !important;
+    overflow: hidden;
+  }
+  .footerImg img{
+    width:180px !important ;
+  }
+  .userRate{
+    flex-direction: column;
+    align-items: center;
+    place-content: center;
+  }
+}
+
+
+
+@media (max-width: 740px) {
   .grid-adjustable-columns {
     display: grid;
     grid-auto-flow: row;
@@ -101,8 +335,14 @@ nav .pageLink ul{
   h1{
     font-size: 3rem;
   }
-  nav .navbar{
+  h3{
+    font-size: 1.1rem;
+  }
+  nav .navbarFlex{
     display: block;
+  }
+  nav .navbar{
+  display: block;
   margin-top: 1.8rem;
   }
   nav .pageLink ul{
@@ -131,17 +371,75 @@ nav .pageLink ul{
     font-size: 2rem;
     margin-top: -1.8rem;
   }
-  .heroLeft article p, button.btn{
-    font-size: 1rem;
+  .heroLeft article p, button.btn, section.menu .btnMenu{
+    font-size: 1.1rem;
   }
 
   .heroRight img{
     display: none;
   }
+  section.menu{
+    margin-top: 1rem;
+  }
+  section.menu .btnMenu{
+    position: static;
+    margin-top: -15em;
+  }
+
+  .cardComponent{
+    grid-template-columns:1fr;
+    padding: 0 2em;
+    row-gap: 4em;
+  }
+  .price p,.description p{
+    font-size: 1.5rem;
+  }
+  .userdataName,.review{
+    text-align: center;
+  }
+.userData{
+  grid-template-columns:1fr;
+  margin-top: 2rem;
+}
+.userRate{
+  /* flex-direction: column;
+  align-items: center; */
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3rem;
+}
+.userImg img{
+  margin-top: 0.5rem;
+  width:250px;
+}
+.aboutCompany{
+ display: block;
+
+}
+.companyDes{
+  width: 100%;
+  text-align: center;
+
+}
+.img1 img,.img2 img{
+  display: none;
+}
+.footerSection{
+  padding: 3rem 10rem;
 
 }
 
-@media (min-width: 701px) {
+.reservationNav a,.foodTitle li{
+  font-size:1.5rem;
+}
+.footerImg img{
+  width:280px ;
+}
+
+
+}
+
+@media (min-width: 761px) {
   .grid-adjustable-columns {
     width: min(1000px,75rem);
     margin: 0 auto;

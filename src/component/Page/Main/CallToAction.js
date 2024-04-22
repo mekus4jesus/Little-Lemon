@@ -2,7 +2,8 @@ import restuarantFood from '../../../assets/img/restauranfood.jpg'
 
 export const CallToAction = () => {
   return (
-    <div className='section Hero'>
+    <>
+     <section className='Hero'>
       <div className="heroFlex grid-adjustable-columns">
         <div className="heroLeft">
            <h1>Little Lemon</h1>
@@ -20,7 +21,8 @@ export const CallToAction = () => {
           <img src={restuarantFood} alt='Resturantfood' />
         </div>
       </div>
-    </div>
+    </section>
+    </>
   )
 }
 
