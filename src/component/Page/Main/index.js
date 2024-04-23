@@ -4,7 +4,6 @@ import { SpecialWeek } from './specialWeek'
 import { Card } from './Menu'
 import { Testimonal } from './Testimonal'
 import { About } from './About'
-import { Footer } from '../../Footer'
 
 
 
@@ -16,7 +15,6 @@ export const Home = () => {
     <Card />
     <Testimonal />
     <About />
-    <Footer />
     </main>
   )
 }
