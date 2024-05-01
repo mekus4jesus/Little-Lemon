@@ -1,6 +1,10 @@
+import { useNavigate } from 'react-router-dom'
 import restuarantFood from '../../../assets/img/restauranfood.jpg'
 
 export const CallToAction = () => {
+
+  const navigate = useNavigate()
+  
   return (
     <>
      <section className='Hero'>
@@ -14,7 +18,11 @@ export const CallToAction = () => {
               Mediterranean restaurant,
               focused on traditional recipe  served with a modern twist
               </p>
-              <button className='btn'> Reserve a Table </button>
+              <button 
+              className='btn'
+              onClick={() => navigate('/booking')}
+              > Reserve a Table
+               </button>
              </article>
         </div>
         <div className="heroRight">

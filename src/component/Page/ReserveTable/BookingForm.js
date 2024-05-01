@@ -54,6 +54,7 @@ const BookingForm = ({ availableTimes, dispatch, onSubmit }) => {
         </select>
         <label htmlFor="guests">Number of guests</label>
         <input
+         aria-label='Guest'
           type="number"
           placeholder="1"
           min="1"
