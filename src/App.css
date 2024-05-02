@@ -308,13 +308,14 @@ label {
   font-family: var(--primaryFont);
 font-size: 1.125rem;
 }
-
+input[type='text'],
+input[type='email'],
 input[type="date"],
 select,
 input[type="number"] {
   width: 100%;
   padding: 8px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
@@ -338,6 +339,20 @@ input[type="submit"]:disabled {
 input[type="submit"]:hover {
   background-color: #0056b3;
   color: #fff;
+}
+sup{
+  color: red;
+  font-size: 1.125rem;
+}
+input:focus:invalid{
+  border: 2px solid #f80707 !important;
+}
+input:focus{
+  border:2px solid #ccc !important ;
+}
+.error{
+  color: red;
+  padding-top: -5rem;
 }
 
 

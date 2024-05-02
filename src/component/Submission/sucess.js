@@ -20,9 +20,12 @@ const ConfirmedBooking = () => {
       {formData && (
         <div>
           <h2>Booking Details</h2>
+          <p>Full Name: {formData.fullName}</p>
+          <p>Email: {formData.email}</p>
           <p>Date: {formData.date}</p>
           <p>Time: {formData.time}</p>
-          <p>GUEST: {formData.guests}</p>
+          <p>{formData.guests === 1 ? "Guest":"Guests:"}{formData.guests}</p>
+          <p>Guest: {formData.guests}</p>
           <p>Occassion: {formData.occasion}</p>
           {/* Display other form data fields as needed */}
         </div>
